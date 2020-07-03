@@ -5,3 +5,16 @@
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
   }
+
+
+.flex-row-start{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.nameTxt{
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-grow: 1;
+}

@@ -76,6 +76,13 @@ const App = (props) => {
     });
   };
 
+  let itemDeleteHandler = (index)=>{
+    console.log(`item delete handler called ${index}`);
+    let persons = [...personState.persons];
+    persons.splice(index, 1);
+    setPersonState({persons});
+  }
+
   const buttonStyle = {
     backgroundColor: "white",
     padding: "0.25rem",
@@ -99,12 +106,12 @@ const App = (props) => {
           {personState.persons.map((person, index) => {
             return (
               <Person
-                name={person.name}
-                age={person.age}
-                key={index}
-                click={nameSwitchHandler}
+                name={person.name} 
+                age={person.age} 
+                key={index} 
+                click={nameSwitchHandler} 
                 nameChange={nameChangeHandler}
-              />
+                delete = {(index)=>itemDeleteHandler()}/>
             );
           })}
         </div>: null
